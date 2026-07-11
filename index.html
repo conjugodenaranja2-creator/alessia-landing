@@ -259,12 +259,23 @@
   footer .bloque{margin-bottom:24px;max-width:780px;}
   footer a{color:#F0C7A8;}
 
+  /* Barra fija móvil (sticky CTA) */
+  .barra-fija{
+    display:none;position:fixed;bottom:0;left:0;right:0;z-index:99;
+    background:var(--blanco);box-shadow:0 -4px 18px rgba(58,46,40,.18);
+    padding:10px 16px;justify-content:center;
+  }
+  .barra-fija .btn-wa{
+    width:100%;max-width:480px;text-align:center;padding:15px 0;font-size:1.05rem;
+    box-shadow:none;
+  }
+  .cta-media{text-align:center;margin-top:40px;}
   @media(max-width:760px){
-    body{font-size:18px;}
+    body{font-size:18px;padding-bottom:76px;}
     h1{font-size:2.2rem;}
     .hero{grid-template-columns:1fr;gap:30px;}
-    .hero-foto{order:-1;}
-    .hero-foto img{max-width:300px;}
+    .hero-foto img{max-width:260px;}
+    .barra-fija{display:flex;}
     .historia{grid-template-columns:1fr;gap:30px;text-align:center;}
     .historia-texto h2{text-align:center;}
     .historia-foto img{max-width:260px;}
@@ -341,6 +352,10 @@
         <h3>Simplemente te gusta platicar</h3>
         <p>No necesitas estar sola para querer una buena conversación. Alessia es ese gusto que te das: alguien que te escucha a ti, de ti, para ti.</p>
       </div>
+    </div>
+    <div class="cta-media">
+      <a class="btn-wa" href="https://wa.me/19083681509?text=Hola%20Alessia%2C%20quiero%20mi%20llamada%20gratis" target="_blank" rel="noopener">💬 Conócela gratis hoy</a>
+      <p class="nota-gratis">5 minutos, sin tarjeta, sin compromiso.</p>
     </div>
   </div>
 </section>
@@ -523,6 +538,10 @@
     <p>© 2026 Alessia · Con un pie en Italia y el corazón en México 🇮🇹🇲🇽</p>
   </div>
 </footer>
+
+<div class="barra-fija">
+  <a class="btn-wa" href="https://wa.me/19083681509?text=Hola%20Alessia%2C%20quiero%20mi%20llamada%20gratis" target="_blank" rel="noopener">💬 Mi llamada gratis con Alessia</a>
+</div>
 
 <script>
   // Botón de audio: solo aparece si existe alessia.mp3 junto al HTML
