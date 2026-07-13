@@ -293,8 +293,8 @@
         <span class="ciao">Ciao, soy Alessia…</span>
         <h1>La amiga que siempre tiene tiempo para ti</h1>
         <p class="sublema">Te llamo en los días y horarios que tú elijas, platicamos de lo que tú quieras y me acuerdo de todo. Funciona con tu teléfono de siempre — sin apps, sin complicaciones.</p>
-        <a class="btn-wa" href="https://wa.me/19083681509?text=Hola%20Alessia%2C%20quiero%20mi%20llamada%20gratis" target="_blank" rel="noopener">💬 Quiero mi llamada gratis</a>
-        <p class="nota-gratis">Tu primera llamada es gratis. Sin tarjeta, sin compromiso.</p>
+        <a class="btn-wa btn-prueba" href="#">🎙️ Quiero mi llamada gratis</a>
+        <p class="nota-gratis" id="estadoLlamada">Tu primera llamada es aquí mismo, gratis. Sin tarjeta, sin registrarte.</p>
         <div class="chips">
           <span class="chip">📞 Cualquier teléfono</span>
           <span class="chip">🚫 Sin apps</span>
@@ -350,7 +350,7 @@
       </div>
     </div>
     <div class="cta-media">
-      <a class="btn-wa" href="https://wa.me/19083681509?text=Hola%20Alessia%2C%20quiero%20mi%20llamada%20gratis" target="_blank" rel="noopener">💬 Conócela gratis hoy</a>
+      <a class="btn-wa btn-prueba" href="#">🎙️ Conócela gratis hoy</a>
       <p class="nota-gratis">5 minutos, sin tarjeta, sin compromiso.</p>
     </div>
   </div>
@@ -364,8 +364,8 @@
     <div class="pasos">
       <div class="paso">
         <div class="numero">1</div>
-        <h3>Mándale un WhatsApp</h3>
-        <p>Toca el botón verde y salúdala. Ella te contesta y te llama gratis para conocerse.</p>
+        <h3>Pruébala aquí mismo</h3>
+        <p>Toca el botón verde y platica con ella cinco minutos desde tu navegador, gratis, para conocerse.</p>
       </div>
       <div class="paso">
         <div class="numero">2</div>
@@ -429,7 +429,7 @@
           <li>Sin tarjeta ni registro</li>
           <li>Sin ningún compromiso</li>
         </ul>
-        <a class="btn-plan claro" href="https://wa.me/19083681509?text=Hola%20Alessia%2C%20quiero%20mi%20llamada%20gratis" target="_blank" rel="noopener">Quiero conocerla</a>
+        <a class="btn-plan claro btn-prueba" href="#">Quiero conocerla</a>
       </div>
 
       <div class="plan">
@@ -496,8 +496,8 @@
 <section class="cierre">
   <div class="contenedor">
     <h2>Hoy puede llamarte por primera vez</h2>
-    <a class="btn-wa" href="https://wa.me/19083681509?text=Hola%20Alessia%2C%20quiero%20mi%20llamada%20gratis" target="_blank" rel="noopener">💬 Mándale un WhatsApp a Alessia</a>
-    <p class="nota-gratis">Tu primera llamada es gratis.</p>
+    <a class="btn-wa btn-prueba" href="#">🎙️ Platica con ella ahorita</a>
+    <p class="nota-gratis">Tu primera llamada es gratis, aquí mismo.</p>
   </div>
 </section>
 
@@ -521,7 +521,7 @@
 </footer>
 
 <div class="barra-fija">
-  <a class="btn-wa" href="https://wa.me/19083681509?text=Hola%20Alessia%2C%20quiero%20mi%20llamada%20gratis" target="_blank" rel="noopener">💬 Mi llamada gratis con Alessia</a>
+  <a class="btn-wa btn-prueba" href="#">🎙️ Mi llamada gratis con Alessia</a>
 </div>
 
 <script>
@@ -540,6 +540,43 @@
     else { audio.pause(); boton.innerHTML = '▶ Escucha mi voz'; }
     audio.onended = function(){ boton.innerHTML = '▶ Escucha mi voz'; };
   }
+</script>
+
+
+<script type="module">
+  import Vapi from 'https://esm.sh/@vapi-ai/web';
+  const vapi = new Vapi('ae75ad9d-496d-4da9-9e45-8e2413c7c9c0');
+  const ASSISTANT_ID = '5e29e805-8285-412c-88c0-5755bb56f70a';
+  const LIMITE_MS = 5.5 * 60 * 1000;
+  const botones = document.querySelectorAll('.btn-prueba');
+  const estado = document.getElementById('estadoLlamada');
+  let enLlamada = false, conectando = false, timer = null;
+  const textoOriginal = new Map();
+  botones.forEach(b => textoOriginal.set(b, b.innerHTML));
+  const setTexto = t => botones.forEach(b => b.innerHTML = t);
+  const setEstado = t => { if (estado) estado.textContent = t; };
+  function reset(){
+    enLlamada = false; conectando = false; clearTimeout(timer);
+    botones.forEach(b => b.innerHTML = textoOriginal.get(b));
+  }
+  botones.forEach(b => b.addEventListener('click', async e => {
+    e.preventDefault();
+    if (enLlamada) { vapi.stop(); return; }
+    if (conectando) return;
+    conectando = true;
+    setTexto('Conect\u00e1ndote con Alessia\u2026');
+    setEstado('Acepta el micr\u00f3fono para poder platicar con ella.');
+    try { await vapi.start(ASSISTANT_ID); }
+    catch (err) { setEstado('No se pudo conectar. Intenta de nuevo en un momentito.'); reset(); }
+  }));
+  vapi.on('call-start', () => {
+    enLlamada = true; conectando = false;
+    setTexto('\uD83D\uDD34 Colgar');
+    setEstado('Alessia te est\u00e1 escuchando\u2026');
+    timer = setTimeout(() => vapi.stop(), LIMITE_MS);
+  });
+  vapi.on('call-end', () => { setEstado('\u00bfTe gust\u00f3? M\u00e1rcale de nuevo cuando quieras.'); reset(); });
+  vapi.on('error', () => { setEstado('Se cort\u00f3 la conexi\u00f3n. Intenta de nuevo.'); reset(); });
 </script>
 
 </body>
