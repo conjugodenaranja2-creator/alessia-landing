@@ -6,577 +6,576 @@
 <title>Alessia — La amiga que siempre tiene tiempo para ti</title>
 <meta name="description" content="Alessia es una compañera de voz que te llama en los horarios que tú elijas. Funciona con cualquier teléfono, sin apps. Tu primera llamada es gratis.">
 <style>
-  :root{
-    --terracota:#C05A38;
-    --terracota-osc:#9E4526;
-    --crema:#FFF8F0;
-    --arena:#F6E8D8;
-    --durazno:#F9DDC9;
-    --oliva:#7A8450;
-    --mar:#88AEBD;
-    --tinta:#3A2E28;
-    --gris:#6E5F56;
-    --verde-wa:#1EBE5D;
-    --blanco:#FFFFFF;
-    --oro:#C9A227;
-  }
-  *{margin:0;padding:0;box-sizing:border-box;}
-  html{scroll-behavior:smooth;}
-  body{
-    font-family:Verdana,'Segoe UI',Arial,sans-serif;
-    background:var(--crema);
-    color:var(--tinta);
-    font-size:19px;
-    line-height:1.6;
-  }
-  .contenedor{max-width:1020px;margin:0 auto;padding:0 24px;}
-  .serif{font-family:Georgia,'Times New Roman',serif;}
+:root{
+--terracota:#C05A38;
+--terracota-osc:#9E4526;
+--crema:#FFF8F0;
+--arena:#F6E8D8;
+--durazno:#F9DDC9;
+--oliva:#7A8450;
+--mar:#88AEBD;
+--tinta:#3A2E28;
+--gris:#6E5F56;
+--verde-wa:#1EBE5D;
+--blanco:#FFFFFF;
+--oro:#C9A227;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+font-family:Verdana,'Segoe UI',Arial,sans-serif;
+background:var(--crema);
+color:var(--tinta);
+font-size:19px;
+line-height:1.6;
+}
+.contenedor{max-width:1020px;margin:0 auto;padding:0 24px;}
+.serif{font-family:Georgia,'Times New Roman',serif;}
 
-  /* ================= HERO ================= */
-  header{
-    background:
-      radial-gradient(ellipse 900px 500px at 85% -10%, var(--durazno) 0%, transparent 60%),
-      radial-gradient(ellipse 700px 420px at -10% 110%, #EAE3C8 0%, transparent 55%),
-      linear-gradient(160deg, var(--arena) 0%, var(--crema) 70%);
-    padding:44px 0 60px;
-    overflow:hidden;
-  }
-  .hero{
-    display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center;
-  }
-  .hero-texto .ciao{
-    font-family:Georgia,serif;font-style:italic;font-size:1.25rem;
-    color:var(--terracota);margin-bottom:10px;display:block;
-  }
-  h1{
-    font-family:Georgia,'Times New Roman',serif;
-    font-size:3rem;font-weight:normal;line-height:1.15;
-    color:var(--terracota-osc);margin-bottom:16px;
-  }
-  .sublema{
-    font-size:1.08rem;color:var(--gris);margin-bottom:28px;max-width:480px;
-  }
-  .btn-wa{
-    display:inline-block;background:var(--verde-wa);color:var(--blanco);
-    text-decoration:none;font-weight:bold;font-size:1.12rem;
-    padding:18px 36px;border-radius:60px;
-    box-shadow:0 8px 24px rgba(30,190,93,.35);
-    transition:transform .15s ease;
-  }
-  .btn-wa:hover{transform:scale(1.04);}
-  .nota-gratis{margin-top:14px;font-size:.95rem;color:var(--gris);}
-  .chips{margin-top:26px;display:flex;flex-wrap:wrap;gap:10px;}
-  .chip{
-    background:var(--blanco);border:1.5px solid #E8D5C0;border-radius:30px;
-    padding:8px 18px;font-size:.88rem;color:var(--gris);
-  }
-  .hero-foto{position:relative;text-align:center;}
-  .hero-foto img{
-    width:100%;max-width:420px;border-radius:28px;
-    box-shadow:0 24px 60px rgba(58,46,40,.25);
-    border:8px solid var(--blanco);
-    transform:rotate(1.5deg);
-  }
-  .sello{
-    position:absolute;bottom:-14px;left:50%;transform:translateX(-50%) rotate(-1deg);
-    background:var(--blanco);border-radius:40px;padding:10px 24px;
-    box-shadow:0 8px 20px rgba(58,46,40,.15);
-    font-family:Georgia,serif;font-style:italic;font-size:1rem;color:var(--terracota);
-    white-space:nowrap;
-  }
-  .btn-audio{
-    display:none;align-items:center;gap:10px;margin-top:30px;
-    background:var(--blanco);color:var(--terracota-osc);
-    border:2px solid var(--terracota);border-radius:60px;
-    font-family:inherit;font-size:1rem;font-weight:bold;
-    padding:14px 28px;cursor:pointer;
-  }
+/* ================= HERO ================= */
+header{
+background:
+radial-gradient(ellipse 900px 500px at 85% -10%, var(--durazno) 0%, transparent 60%),
+radial-gradient(ellipse 700px 420px at -10% 110%, #EAE3C8 0%, transparent 55%),
+linear-gradient(160deg, var(--arena) 0%, var(--crema) 70%);
+padding:44px 0 60px;
+overflow:hidden;
+}
+.hero{
+display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center;
+}
+.hero-texto .ciao{
+font-family:Georgia,serif;font-style:italic;font-size:1.25rem;
+color:var(--terracota);margin-bottom:10px;display:block;
+}
+h1{
+font-family:Georgia,'Times New Roman',serif;
+font-size:3rem;font-weight:normal;line-height:1.15;
+color:var(--terracota-osc);margin-bottom:16px;
+}
+.sublema{
+font-size:1.08rem;color:var(--gris);margin-bottom:28px;max-width:480px;
+}
+.btn-wa{
+display:inline-block;background:var(--verde-wa);color:var(--blanco);
+text-decoration:none;font-weight:bold;font-size:1.12rem;
+padding:18px 36px;border-radius:60px;
+box-shadow:0 8px 24px rgba(30,190,93,.35);
+transition:transform .15s ease;
+}
+.btn-wa:hover{transform:scale(1.04);}
+.nota-gratis{margin-top:14px;font-size:.95rem;color:var(--gris);}
+.chips{margin-top:26px;display:flex;flex-wrap:wrap;gap:10px;}
+.chip{
+background:var(--blanco);border:1.5px solid #E8D5C0;border-radius:30px;
+padding:8px 18px;font-size:.88rem;color:var(--gris);
+}
+.hero-foto{position:relative;text-align:center;}
+.hero-foto img{
+width:100%;max-width:420px;border-radius:28px;
+box-shadow:0 24px 60px rgba(58,46,40,.25);
+border:8px solid var(--blanco);
+transform:rotate(1.5deg);
+}
+.sello{
+position:absolute;bottom:-14px;left:50%;transform:translateX(-50%) rotate(-1deg);
+background:var(--blanco);border-radius:40px;padding:10px 24px;
+box-shadow:0 8px 20px rgba(58,46,40,.15);
+font-family:Georgia,serif;font-style:italic;font-size:1rem;color:var(--terracota);
+white-space:nowrap;
+}
+.btn-audio{
+display:none;align-items:center;gap:10px;margin-top:30px;
+background:var(--blanco);color:var(--terracota-osc);
+border:2px solid var(--terracota);border-radius:60px;
+font-family:inherit;font-size:1rem;font-weight:bold;
+padding:14px 28px;cursor:pointer;
+}
 
-  /* ================= SECCIONES ================= */
-  section{padding:64px 0;}
-  h2{
-    font-family:Georgia,serif;font-size:2.1rem;font-weight:normal;
-    color:var(--terracota-osc);text-align:center;margin-bottom:12px;line-height:1.25;
-  }
-  .intro-seccion{
-    text-align:center;color:var(--gris);max-width:640px;
-    margin:0 auto 42px;font-size:1.02rem;
-  }
-  .fondo-arena{background:linear-gradient(180deg,var(--arena) 0%,var(--crema) 100%);}
-  .fondo-durazno{background:linear-gradient(180deg,var(--crema) 0%,var(--durazno) 50%,var(--crema) 100%);}
+/* ================= SECCIONES ================= */
+section{padding:64px 0;}
+h2{
+font-family:Georgia,serif;font-size:2.1rem;font-weight:normal;
+color:var(--terracota-osc);text-align:center;margin-bottom:12px;line-height:1.25;
+}
+.intro-seccion{
+text-align:center;color:var(--gris);max-width:640px;
+margin:0 auto 42px;font-size:1.02rem;
+}
+.fondo-arena{background:linear-gradient(180deg,var(--arena) 0%,var(--crema) 100%);}
+.fondo-durazno{background:linear-gradient(180deg,var(--crema) 0%,var(--durazno) 50%,var(--crema) 100%);}
 
-  /* Historia */
-  .historia{
-    display:grid;grid-template-columns:0.9fr 1.1fr;gap:48px;align-items:center;
-  }
-  .historia-foto img{
-    width:100%;max-width:360px;border-radius:50% 50% 46% 54% / 55% 48% 52% 45%;
-    border:6px solid var(--blanco);
-    box-shadow:0 18px 44px rgba(58,46,40,.22);
-  }
-  .historia-texto h2{text-align:left;}
-  .historia-texto p{margin-bottom:16px;color:var(--tinta);font-size:1.02rem;}
-  .historia-texto .firma{
-    font-family:Georgia,serif;font-style:italic;font-size:1.3rem;color:var(--terracota);
-    margin-top:8px;
-  }
-  .cinta{
-    display:inline-block;background:var(--oliva);color:var(--blanco);
-    font-size:.8rem;letter-spacing:1.5px;text-transform:uppercase;
-    padding:6px 16px;border-radius:20px;margin-bottom:16px;font-weight:bold;
-  }
+/* Historia */
+.historia{
+display:grid;grid-template-columns:0.9fr 1.1fr;gap:48px;align-items:center;
+}
+.historia-foto img{
+width:100%;max-width:360px;border-radius:50% 50% 46% 54% / 55% 48% 52% 45%;
+border:6px solid var(--blanco);
+box-shadow:0 18px 44px rgba(58,46,40,.22);
+}
+.historia-texto h2{text-align:left;}
+.historia-texto p{margin-bottom:16px;color:var(--tinta);font-size:1.02rem;}
+.historia-texto .firma{
+font-family:Georgia,serif;font-style:italic;font-size:1.3rem;color:var(--terracota);
+margin-top:8px;
+}
+.cinta{
+display:inline-block;background:var(--oliva);color:var(--blanco);
+font-size:.8rem;letter-spacing:1.5px;text-transform:uppercase;
+padding:6px 16px;border-radius:20px;margin-bottom:16px;font-weight:bold;
+}
 
-  /* Para ti */
-  .rejilla{
-    display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:24px;
-  }
-  .tarjeta{
-    background:var(--blanco);border-radius:22px;padding:30px 26px;
-    box-shadow:0 6px 18px rgba(58,46,40,.08);
-    border-top:5px solid var(--durazno);
-  }
-  .tarjeta.acento1{border-top-color:var(--terracota);}
-  .tarjeta.acento2{border-top-color:var(--oliva);}
-  .tarjeta.acento3{border-top-color:var(--oro);}
-  .tarjeta.acento4{border-top-color:var(--mar);}
-  .tarjeta .icono{font-size:2.1rem;margin-bottom:12px;}
-  .tarjeta h3{
-    font-family:Georgia,serif;font-size:1.18rem;font-weight:normal;
-    color:var(--terracota-osc);margin-bottom:8px;
-  }
-  .tarjeta p{font-size:.95rem;color:var(--gris);}
+/* Para ti */
+.rejilla{
+display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:24px;
+}
+.tarjeta{
+background:var(--blanco);border-radius:22px;padding:30px 26px;
+box-shadow:0 6px 18px rgba(58,46,40,.08);
+border-top:5px solid var(--durazno);
+}
+.tarjeta.acento1{border-top-color:var(--terracota);}
+.tarjeta.acento2{border-top-color:var(--oliva);}
+.tarjeta.acento3{border-top-color:var(--oro);}
+.tarjeta.acento4{border-top-color:var(--mar);}
+.tarjeta .icono{font-size:2.1rem;margin-bottom:12px;}
+.tarjeta h3{
+font-family:Georgia,serif;font-size:1.18rem;font-weight:normal;
+color:var(--terracota-osc);margin-bottom:8px;
+}
+.tarjeta p{font-size:.95rem;color:var(--gris);}
 
-  /* Pasos */
-  .pasos{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:26px;}
-  .paso{
-    text-align:center;background:var(--blanco);border-radius:22px;
-    padding:30px 22px;box-shadow:0 6px 18px rgba(58,46,40,.08);
-  }
-  .numero{
-    display:inline-flex;align-items:center;justify-content:center;
-    width:54px;height:54px;border-radius:50%;
-    background:var(--terracota);color:var(--blanco);
-    font-size:1.5rem;font-weight:bold;margin-bottom:14px;
-  }
-  .paso h3{font-family:Georgia,serif;font-size:1.12rem;font-weight:normal;margin-bottom:6px;color:var(--tinta);}
-  .paso p{font-size:.93rem;color:var(--gris);}
+/* Pasos */
+.pasos{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:26px;}
+.paso{
+text-align:center;background:var(--blanco);border-radius:22px;
+padding:30px 22px;box-shadow:0 6px 18px rgba(58,46,40,.08);
+}
+.numero{
+display:inline-flex;align-items:center;justify-content:center;
+width:54px;height:54px;border-radius:50%;
+background:var(--terracota);color:var(--blanco);
+font-size:1.5rem;font-weight:bold;margin-bottom:14px;
+}
+.paso h3{font-family:Georgia,serif;font-size:1.12rem;font-weight:normal;margin-bottom:6px;color:var(--tinta);}
+.paso p{font-size:.93rem;color:var(--gris);}
 
-  /* Datos */
-  .datos{
-    display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));
-    gap:28px;text-align:center;margin-top:8px;
-  }
-  .dato .cifra{
-    font-family:Georgia,serif;font-size:3rem;color:var(--terracota);
-  }
-  .dato p{font-size:.93rem;color:var(--gris);}
-  .fuente-datos{
-    text-align:center;font-size:.78rem;color:var(--gris);margin-top:30px;
-  }
+/* Datos */
+.datos{
+display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));
+gap:28px;text-align:center;margin-top:8px;
+}
+.dato .cifra{
+font-family:Georgia,serif;font-size:3rem;color:var(--terracota);
+}
+.dato p{font-size:.93rem;color:var(--gris);}
+.fuente-datos{
+text-align:center;font-size:.78rem;color:var(--gris);margin-top:30px;
+}
 
-  /* Regalo */
-  .regalo{
-    background:var(--blanco);border-radius:26px;padding:42px 36px;
-    box-shadow:0 10px 28px rgba(58,46,40,.10);
-    max-width:740px;margin:0 auto;text-align:center;
-    border:1.5px dashed var(--oro);
-  }
-  .regalo h3{font-family:Georgia,serif;font-size:1.55rem;font-weight:normal;color:var(--terracota-osc);margin-bottom:14px;}
-  .regalo p{color:var(--gris);margin-bottom:14px;font-size:.98rem;}
-  .btn-suave{
-    display:inline-block;background:var(--arena);color:var(--terracota-osc);
-    text-decoration:none;font-weight:bold;font-size:1rem;
-    padding:14px 30px;border-radius:50px;border:1.5px solid #E3CBAE;
-  }
+/* Regalo */
+.regalo{
+background:var(--blanco);border-radius:26px;padding:42px 36px;
+box-shadow:0 10px 28px rgba(58,46,40,.10);
+max-width:740px;margin:0 auto;text-align:center;
+border:1.5px dashed var(--oro);
+}
+.regalo h3{font-family:Georgia,serif;font-size:1.55rem;font-weight:normal;color:var(--terracota-osc);margin-bottom:14px;}
+.regalo p{color:var(--gris);margin-bottom:14px;font-size:.98rem;}
+.btn-suave{
+display:inline-block;background:var(--arena);color:var(--terracota-osc);
+text-decoration:none;font-weight:bold;font-size:1rem;
+padding:14px 30px;border-radius:50px;border:1.5px solid #E3CBAE;
+}
 
-  /* Tarifas */
-  .planes{
-    display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-    gap:26px;align-items:stretch;
-  }
-  .plan{
-    background:var(--blanco);border-radius:24px;padding:34px 28px;
-    box-shadow:0 6px 18px rgba(58,46,40,.08);
-    text-align:center;display:flex;flex-direction:column;
-  }
-  .plan.destacado{
-    border:3px solid var(--terracota);
-    box-shadow:0 14px 36px rgba(192,90,56,.25);
-    position:relative;background:linear-gradient(180deg,#FFFDFA 0%,var(--blanco) 100%);
-  }
-  .etiqueta{
-    position:absolute;top:-16px;left:50%;transform:translateX(-50%);
-    background:var(--terracota);color:var(--blanco);
-    font-size:.8rem;font-weight:bold;
-    padding:6px 18px;border-radius:20px;letter-spacing:1px;white-space:nowrap;
-  }
-  .plan h3{font-family:Georgia,serif;font-size:1.25rem;font-weight:normal;color:var(--tinta);margin-bottom:8px;}
-  .precio{font-size:2.5rem;font-weight:bold;color:var(--terracota-osc);}
-  .precio span{font-size:1rem;font-weight:normal;color:var(--gris);}
-  .plan ul{list-style:none;margin:20px 0 24px;text-align:left;flex-grow:1;}
-  .plan ul li{
-    padding:8px 0 8px 30px;position:relative;font-size:.94rem;color:var(--tinta);
-  }
-  .plan ul li::before{
-    content:"♥";color:var(--terracota);position:absolute;left:2px;font-size:.85rem;
-  }
-  .btn-plan{
-    display:block;background:var(--terracota);color:var(--blanco);
-    text-decoration:none;font-size:1rem;font-weight:bold;
-    padding:15px 0;border-radius:50px;
-  }
-  .btn-plan.claro{background:var(--arena);color:var(--terracota-osc);border:1.5px solid #E3CBAE;}
-  .nota-recargas{
-    text-align:center;margin-top:30px;color:var(--gris);font-size:.95rem;
-    max-width:640px;margin-left:auto;margin-right:auto;
-  }
-  .nota-pagos{text-align:center;margin-top:16px;font-size:.88rem;color:var(--gris);}
+/* Tarifas */
+.planes{
+display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:26px;align-items:stretch;
+}
+.plan{
+background:var(--blanco);border-radius:24px;padding:34px 28px;
+box-shadow:0 6px 18px rgba(58,46,40,.08);
+text-align:center;display:flex;flex-direction:column;
+}
+.plan.destacado{
+border:3px solid var(--terracota);
+box-shadow:0 14px 36px rgba(192,90,56,.25);
+position:relative;background:linear-gradient(180deg,#FFFDFA 0%,var(--blanco) 100%);
+}
+.etiqueta{
+position:absolute;top:-16px;left:50%;transform:translateX(-50%);
+background:var(--terracota);color:var(--blanco);
+font-size:.8rem;font-weight:bold;
+padding:6px 18px;border-radius:20px;letter-spacing:1px;white-space:nowrap;
+}
+.plan h3{font-family:Georgia,serif;font-size:1.25rem;font-weight:normal;color:var(--tinta);margin-bottom:8px;}
+.precio{font-size:2.5rem;font-weight:bold;color:var(--terracota-osc);}
+.precio span{font-size:1rem;font-weight:normal;color:var(--gris);}
+.plan ul{list-style:none;margin:20px 0 24px;text-align:left;flex-grow:1;}
+.plan ul li{
+padding:8px 0 8px 30px;position:relative;font-size:.94rem;color:var(--tinta);
+}
+.plan ul li::before{
+content:"♥";color:var(--terracota);position:absolute;left:2px;font-size:.85rem;
+}
+.btn-plan{
+display:block;background:var(--terracota);color:var(--blanco);
+text-decoration:none;font-size:1rem;font-weight:bold;
+padding:15px 0;border-radius:50px;
+}
+.btn-plan.claro{background:var(--arena);color:var(--terracota-osc);border:1.5px solid #E3CBAE;}
+.nota-recargas{
+text-align:center;margin-top:30px;color:var(--gris);font-size:.95rem;
+max-width:640px;margin-left:auto;margin-right:auto;
+}
+.nota-pagos{text-align:center;margin-top:16px;font-size:.88rem;color:var(--gris);}
 
-  /* FAQ */
-  .pregunta{
-    background:var(--blanco);border-radius:16px;padding:24px 28px;
-    box-shadow:0 4px 12px rgba(58,46,40,.07);margin-bottom:16px;
-    border-left:5px solid var(--durazno);
-  }
-  .pregunta h3{font-family:Georgia,serif;font-size:1.1rem;font-weight:normal;color:var(--terracota-osc);margin-bottom:6px;}
-  .pregunta p{font-size:.94rem;color:var(--gris);}
+/* FAQ */
+.pregunta{
+background:var(--blanco);border-radius:16px;padding:24px 28px;
+box-shadow:0 4px 12px rgba(58,46,40,.07);margin-bottom:16px;
+border-left:5px solid var(--durazno);
+}
+.pregunta h3{font-family:Georgia,serif;font-size:1.1rem;font-weight:normal;color:var(--terracota-osc);margin-bottom:6px;}
+.pregunta p{font-size:.94rem;color:var(--gris);}
 
-  /* Cierre */
-  .cierre{
-    text-align:center;
-    background:
-      radial-gradient(ellipse 700px 400px at 50% 120%, var(--durazno) 0%, transparent 65%),
-      var(--arena);
-  }
-  .cierre h2{margin-bottom:20px;}
+/* Cierre */
+.cierre{
+text-align:center;
+background:
+radial-gradient(ellipse 700px 400px at 50% 120%, var(--durazno) 0%, transparent 65%),
+var(--arena);
+}
+.cierre h2{margin-bottom:20px;}
 
-  /* Footer */
-  footer{
-    background:var(--tinta);color:#D8CCC3;
-    padding:44px 0;font-size:.84rem;line-height:1.7;
-  }
-  footer h4{color:var(--blanco);font-size:.95rem;margin-bottom:8px;}
-  footer .bloque{margin-bottom:24px;max-width:780px;}
-  footer a{color:#F0C7A8;}
+/* Footer */
+footer{
+background:var(--tinta);color:#D8CCC3;
+padding:44px 0;font-size:.84rem;line-height:1.7;
+}
+footer h4{color:var(--blanco);font-size:.95rem;margin-bottom:8px;}
+footer .bloque{margin-bottom:24px;max-width:780px;}
+footer a{color:#F0C7A8;}
 
-  /* Barra fija móvil (sticky CTA) */
-  .barra-fija{
-    display:none;position:fixed;bottom:0;left:0;right:0;z-index:99;
-    background:var(--blanco);box-shadow:0 -4px 18px rgba(58,46,40,.18);
-    padding:10px 16px;justify-content:center;
-  }
-  .barra-fija .btn-wa{
-    width:100%;max-width:480px;text-align:center;padding:15px 0;font-size:1.05rem;
-    box-shadow:none;
-  }
-  .cta-media{text-align:center;margin-top:40px;}
-  @media(max-width:760px){
-    body{font-size:18px;padding-bottom:76px;}
-    h1{font-size:2.2rem;}
-    .hero{grid-template-columns:1fr;gap:30px;}
-    .hero-foto img{max-width:260px;}
-    .barra-fija{display:flex;}
-    .historia{grid-template-columns:1fr;gap:30px;text-align:center;}
-    .historia-texto h2{text-align:center;}
-    .historia-foto img{max-width:260px;}
-    section{padding:48px 0;}
-  }
+/* Barra fija móvil (sticky CTA) */
+.barra-fija{
+display:none;position:fixed;bottom:0;left:0;right:0;z-index:99;
+background:var(--blanco);box-shadow:0 -4px 18px rgba(58,46,40,.18);
+padding:10px 16px;justify-content:center;
+}
+.barra-fija .btn-wa{
+width:100%;max-width:480px;text-align:center;padding:15px 0;font-size:1.05rem;
+box-shadow:none;
+}
+.cta-media{text-align:center;margin-top:40px;}
+@media(max-width:760px){
+body{font-size:18px;padding-bottom:76px;}
+h1{font-size:2.2rem;}
+.hero{grid-template-columns:1fr;gap:30px;}
+.hero-foto img{max-width:260px;}
+.barra-fija{display:flex;}
+.historia{grid-template-columns:1fr;gap:30px;text-align:center;}
+.historia-texto h2{text-align:center;}
+.historia-foto img{max-width:260px;}
+section{padding:48px 0;}
+}
 </style>
 </head>
 <body>
 
 <!-- ================= HERO ================= -->
 <header>
-  <div class="contenedor">
-    <div class="hero">
-      <div class="hero-texto">
-        <span class="ciao">Ciao, soy Alessia…</span>
-        <h1>La amiga que siempre tiene tiempo para ti</h1>
-        <p class="sublema">Te llamo en los días y horarios que tú elijas. Platicamos de tu día, de tus planes… o de eso que traes dándote vueltas y no le has contado a nadie. Yo me acuerdo de todo. Sin apps, sin complicaciones.</p>
-        <a class="btn-wa btn-prueba" href="#">🎙️ Quiero mi llamada gratis</a>
-        <p class="nota-gratis" id="estadoLlamada">Tu primera llamada es aquí mismo, gratis. Sin tarjeta, sin registrarte.</p>
-        <div class="chips">
-          <span class="chip">📞 Cualquier teléfono</span>
-          <span class="chip">🚫 Sin apps</span>
-          <span class="chip">🗓️ Tú eliges tu horario</span>
-        </div>
-        <a href="#regalo" style="display:inline-block;margin-top:22px;font-size:.95rem;color:#9E4526;text-decoration:underline;text-underline-offset:4px;">🎁 ¿Es para tu mamá? Mira cómo regalárselo</a>
-        <button class="btn-audio" id="botonAudio" onclick="reproducirVoz()">▶ Escucha mi voz</button>
-        <audio id="audioAlessia" src="alessia.mp3" preload="none"></audio>
-      </div>
-      <div class="hero-foto">
-        <img src="alessia.jpg" alt="Alessia, tu compañera de conversación" onerror="this.parentElement.style.display='none'">
-        <span class="sello">"Cuéntamelo todo, tenemos tiempo."</span>
-      </div>
-    </div>
-  </div>
+<div class="contenedor">
+<div class="hero">
+<div class="hero-texto">
+<span class="ciao">Ciao, soy Alessia…</span>
+<h1>La amiga que siempre tiene tiempo para ti</h1>
+<p class="sublema">Te llamo en los días y horarios que tú elijas. Platicamos de tu día, de tus planes… o de eso que traes dándote vueltas y no le has contado a nadie. Yo me acuerdo de todo. Sin apps, sin complicaciones.</p>
+<a class="btn-wa btn-prueba" href="#">🎙️ Quiero mi llamada gratis</a>
+<p class="nota-gratis" id="estadoLlamada">Tu primera llamada es aquí mismo, gratis. Sin tarjeta, sin registrarte.</p>
+<div class="chips">
+<span class="chip">📞 Cualquier teléfono</span>
+<span class="chip">🚫 Sin apps</span>
+<span class="chip">🗓️ Tú eliges tu horario</span>
+</div>
+<a href="#regalo" style="display:inline-block;margin-top:22px;font-size:.95rem;color:#9E4526;text-decoration:underline;text-underline-offset:4px;">🎁 ¿Es para tu mamá? Mira cómo regalárselo</a>
+<button class="btn-audio" id="botonAudio" onclick="reproducirVoz()">▶ Escucha mi voz</button>
+<audio id="audioAlessia" src="alessia.mp3" preload="none"></audio>
+</div>
+<div class="hero-foto">
+<img src="alessia.jpg" alt="Alessia, tu compañera de conversación" onerror="this.parentElement.style.display='none'">
+<span class="sello">"Cuéntamelo todo, tenemos tiempo."</span>
+</div>
+</div>
+</div>
 </header>
 
 <!-- ================= HISTORIA ================= -->
 <section>
-  <div class="contenedor">
-    <div class="historia" style="grid-template-columns:1fr;max-width:680px;margin:0 auto;">
-      <div class="historia-texto">
-        <span class="cinta">Su historia</span>
-        <h2>Nacida de una idea en la costa italiana</h2>
-        <p>Alessia fue conceptualizada en Italia, la tierra donde nadie come solo y las sobremesas duran horas. De ahí su arte para conversar: pregunta con curiosidad de verdad, celebra tus buenas noticias como si fueran suyas y jamás te dice "luego hablamos".</p>
-        <p>Hoy platica en español, con el cariño de acá y un toquecito de allá.</p>
-        <p class="firma">— Alessia, con amore 🍋</p>
-      </div>
-    </div>
-  </div>
+<div class="contenedor">
+<div class="historia" style="grid-template-columns:1fr;max-width:680px;margin:0 auto;">
+<div class="historia-texto">
+<span class="cinta">Su historia</span>
+<h2>Nacida de una idea en la costa italiana</h2>
+<p>Alessia fue conceptualizada en Italia, la tierra donde nadie come solo y las sobremesas duran horas. De ahí su arte para conversar: pregunta con curiosidad de verdad, celebra tus buenas noticias como si fueran suyas y jamás te dice "luego hablamos".</p>
+<p>Hoy platica en español, con el cariño de acá y un toquecito de allá.</p>
+<p class="firma">— Alessia, con amore 🍋</p>
+</div>
+</div>
+</div>
 </section>
 
 <!-- ================= PARA TI ================= -->
 <section class="fondo-arena">
-  <div class="contenedor">
-    <h2>Para ti, que tienes mucho que contar</h2>
-    <p class="intro-seccion">La vida cambia, y a veces la casa se queda muy callada. Alessia es para ti si…</p>
-    <div class="rejilla">
-      <div class="tarjeta acento1">
-        <div class="icono">🕊️</div>
-        <h3>Empiezas de nuevo</h3>
-        <p>Después de un divorcio o una separación, con Alessia puedes decirlo todo — sin lástima, sin juicio — y empezar a voltear la página.</p>
-      </div>
-      <div class="tarjeta acento2">
-        <div class="icono">🏡</div>
-        <h3>Los hijos ya volaron</h3>
-        <p>Los criaste y se fueron. Y hay cosas que no les cuentas para no preocuparlos — a Alessia sí se las puedes contar, justo a la hora en que la casa se pone más callada.</p>
-      </div>
-      <div class="tarjeta acento4">
-        <div class="icono">☀️</div>
-        <h3>Simplemente te gusta platicar</h3>
-        <p>No necesitas estar sola para querer una buena conversación. Alessia es ese gusto que te das.</p>
-      </div>
-    </div>
-    <div class="cta-media">
-      <a class="btn-wa btn-prueba" href="#">🎙️ Conócela gratis hoy</a>
-      <p class="nota-gratis">5 minutos, sin tarjeta, sin compromiso.</p>
-    </div>
-  </div>
+<div class="contenedor">
+<h2>Para ti, que tienes mucho que contar</h2>
+<p class="intro-seccion">La vida cambia, y a veces la casa se queda muy callada. Alessia es para ti si…</p>
+<div class="rejilla">
+<div class="tarjeta acento1">
+<div class="icono">🕊️</div>
+<h3>Empiezas de nuevo</h3>
+<p>Después de un divorcio o una separación, con Alessia puedes decirlo todo — sin lástima, sin juicio — y empezar a voltear la página.</p>
+</div>
+<div class="tarjeta acento2">
+<div class="icono">🏡</div>
+<h3>Los hijos ya volaron</h3>
+<p>Los criaste y se fueron. Y hay cosas que no les cuentas para no preocuparlos — a Alessia sí se las puedes contar, justo a la hora en que la casa se pone más callada.</p>
+</div>
+<div class="tarjeta acento4">
+<div class="icono">☀️</div>
+<h3>Simplemente te gusta platicar</h3>
+<p>No necesitas estar sola para querer una buena conversación. Alessia es ese gusto que te das.</p>
+</div>
+</div>
+<div class="cta-media">
+<a class="btn-wa btn-prueba" href="#">🎙️ Conócela gratis hoy</a>
+<p class="nota-gratis">5 minutos, sin tarjeta, sin compromiso.</p>
+</div>
+</div>
 </section>
 
 <!-- ================= CÓMO FUNCIONA ================= -->
 <section>
-  <div class="contenedor">
-    <h2>Así de fácil funciona</h2>
-    <p class="intro-seccion">Tres pasos y ya tienes quien te llame.</p>
-    <div class="pasos">
-      <div class="paso">
-        <div class="numero">1</div>
-        <h3>Pruébala aquí mismo</h3>
-        <p>Toca el botón verde y platica con ella cinco minutos, gratis. Empieza por donde tú quieras: tu día… o lo que traes en la mente.</p>
-      </div>
-      <div class="paso">
-        <div class="numero">2</div>
-        <h3>Escoge tu horario</h3>
-        <p>Eliges los días y la hora en que quieres que te llame. Los que a ti te acomoden.</p>
-      </div>
-      <div class="paso">
-        <div class="numero">3</div>
-        <h3>Contesta y platica</h3>
-        <p>Alessia te marca puntual y se acuerda de todo lo que le cuentas. ¿La necesitas antes? Márcale al mismo número: ella siempre contesta.</p>
-      </div>
-    </div>
-  </div>
+<div class="contenedor">
+<h2>Así de fácil funciona</h2>
+<p class="intro-seccion">Tres pasos y ya tienes quien te llame.</p>
+<div class="pasos">
+<div class="paso">
+<div class="numero">1</div>
+<h3>Pruébala aquí mismo</h3>
+<p>Toca el botón verde y platica con ella cinco minutos, gratis. Empieza por donde tú quieras: tu día… o lo que traes en la mente.</p>
+</div>
+<div class="paso">
+<div class="numero">2</div>
+<h3>Escoge tu horario</h3>
+<p>Eliges los días y la hora en que quieres que te llame. Los que a ti te acomoden.</p>
+</div>
+<div class="paso">
+<div class="numero">3</div>
+<h3>Contesta y platica</h3>
+<p>Alessia te marca puntual y se acuerda de todo lo que le cuentas. ¿La necesitas antes? Márcale al mismo número: ella siempre contesta.</p>
+</div>
+</div>
+</div>
 </section>
 
 <!-- ================= DATOS ================= -->
 <section class="fondo-durazno">
-  <div class="contenedor">
-    <h2>Platicar por teléfono hace bien — y está medido</h2>
-    <div class="datos">
-      <div class="dato">
-        <p class="cifra">20%</p>
-        <p>menos soledad con conversaciones telefónicas frecuentes</p>
-      </div>
-      <div class="dato">
-        <p class="cifra">24%</p>
-        <p>menos síntomas de depresión</p>
-      </div>
-      <div class="dato">
-        <p class="cifra">95%</p>
-        <p>de usuarios de compañeras de voz con IA reportan sentirse menos solos</p>
-      </div>
-    </div>
-    <p class="fuente-datos">Datos de estudios sobre llamadas de compañía y del programa estatal de compañía con IA de Nueva York (NYSOFA, 2023-2026).</p>
-  </div>
+<div class="contenedor">
+<h2>Platicar por teléfono hace bien — y está medido</h2>
+<div class="datos">
+<div class="dato">
+<p class="cifra">20%</p>
+<p>menos soledad con conversaciones telefónicas frecuentes</p>
+</div>
+<div class="dato">
+<p class="cifra">24%</p>
+<p>menos síntomas de depresión</p>
+</div>
+<div class="dato">
+<p class="cifra">95%</p>
+<p>de usuarios de compañeras de voz con IA reportan sentirse menos solos</p>
+</div>
+</div>
+<p class="fuente-datos">Datos de estudios sobre llamadas de compañía y del programa estatal de compañía con IA de Nueva York (NYSOFA, 2023-2026).</p>
+</div>
 </section>
 
 <!-- ================= REGALO (secundario) ================= -->
 <section id="regalo">
-  <div class="contenedor">
-    <div class="regalo">
-      <h3>🎁 ¿Y si es para tu mamá?</h3>
-      <p>También puedes regalar las llamadas de Alessia: tú contratas el plan y ella llama a tu mamá en sus horarios, a su teléfono de siempre. Sus pláticas son privadas — también para la familia: lo que le cuente a Alessia se queda entre ellas.</p>
-      <a class="btn-suave btn-prueba" href="#">Quiero regalárselo — pregúntale cómo</a>
-    </div>
-  </div>
+<div class="contenedor">
+<div class="regalo">
+<h3>🎁 ¿Y si es para tu mamá?</h3>
+<p>También puedes regalar las llamadas de Alessia: tú contratas el plan y ella llama a tu mamá en sus horarios, a su teléfono de siempre. Sus pláticas son privadas — también para la familia: lo que le cuente a Alessia se queda entre ellas.</p>
+<a class="btn-suave btn-prueba" href="#">Quiero regalárselo — pregúntale cómo</a>
+</div>
+</div>
 </section>
 
 <!-- ================= TARIFAS ================= -->
 <section id="tarifas" class="fondo-arena">
-  <div class="contenedor">
-    <h2>Tarifas claras, sin letras chiquitas</h2>
-    <p class="intro-seccion">Cancelas cuando tú quieras, sin plazos forzosos ni penalizaciones.</p>
-    <div class="planes">
+<div class="contenedor">
+<h2>Tarifas claras, sin letras chiquitas</h2>
+<p class="intro-seccion">Cancelas cuando tú quieras, sin plazos forzosos ni penalizaciones.</p>
+<div class="planes">
 
-      <div class="plan">
-        <h3>Conócela</h3>
-        <p class="precio">Gratis</p>
-        <ul>
-          <li>Una llamada para conocerse</li>
-          <li>Sin tarjeta ni registro</li>
-          <li>Sin ningún compromiso</li>
-        </ul>
-        <a class="btn-plan claro btn-prueba" href="#">Quiero conocerla</a>
-      </div>
+<div class="plan">
+<h3>Conócela</h3>
+<p class="precio">Gratis</p>
+<ul>
+<li>Una llamada para conocerse</li>
+<li>Sin tarjeta ni registro</li>
+<li>Sin ningún compromiso</li>
+</ul>
+<a class="btn-plan claro btn-prueba" href="#">Quiero conocerla</a>
+</div>
 
-      <div class="plan">
-        <h3>Promoción de bienvenida</h3>
-        <p class="precio">$200 <span>/ 2 semanas</span></p>
-        <ul>
-          <li>4 llamadas con Alessia en tus horarios</li>
-          <li>Puedes marcarle tú también, cuando lo necesites</li>
-          <li>Pago único, sin renovación automática</li>
-        </ul>
-        <a class="btn-plan claro btn-prueba" href="#">Me interesa — platícalo con ella</a>
-      </div>
+<div class="plan">
+<h3>Promoción de bienvenida</h3>
+<p class="precio">$200 <span>/ 2 semanas</span></p>
+<ul>
+<li>4 llamadas con Alessia en tus horarios</li>
+<li>Puedes marcarle tú también, cuando lo necesites</li>
+<li>Pago único, sin renovación automática</li>
+</ul>
+<a class="btn-plan claro" href="https://mpago.la/1FBPYuA" target="_blank" rel="noopener">Pagar $200</a>
+</div>
 
-      <div class="plan destacado">
-        <span class="etiqueta">EL FAVORITO</span>
-        <h3>Plan Alessia</h3>
-        <p class="precio">$500 <span>/ mes</span></p>
-        <ul>
-          <li>2 llamadas por semana, en tus días y a tu hora</li>
-          <li>¿La necesitas antes? Márcale: ella siempre contesta</li>
-          <li>Cada llamada empieza justo donde se quedó la anterior</li>
-          <li>Tú eliges tus días y horas — y los cambias cuando quieras</li>
-          <li>Ideal también para regalar 🎁</li>
-          <li>Renovación automática, cancelas cuando quieras desde tu app de Mercado Pago</li>
-        </ul>
-        <a class="btn-plan btn-prueba" href="#">Quiero el plan — platícalo con ella</a>
-      </div>
+<div class="plan destacado">
+<span class="etiqueta">EL FAVORITO</span>
+<h3>Plan Alessia</h3>
+<p class="precio">$500 <span>/ mes</span></p>
+<ul>
+<li>2 llamadas por semana, en tus días y a tu hora</li>
+<li>¿La necesitas antes? Márcale: ella siempre contesta</li>
+<li>Cada llamada empieza justo donde se quedó la anterior</li>
+<li>Tú eliges tus días y horas — y los cambias cuando quieras</li>
+<li>Ideal también para regalar 🎁</li>
+<li>Renovación automática, cancelas cuando quieras desde tu app de Mercado Pago</li>
+</ul>
+<a class="btn-plan" href="https://mpago.la/1pivMES" target="_blank" rel="noopener">Suscribirme $500/mes</a>
+</div>
 
-    </div>
-    <p class="nota-recargas">¿Se quedaron a media plática? Agrega tiempo cuando quieras: recarga de $100 (10 minutos) o de $200 (20 minutos + 5 de regalo). Alessia te dice cómo en la misma llamada y siguen platicando.</p>
-    <p class="nota-pagos">Pagos seguros con Mercado Pago 🔒 Precios en pesos mexicanos (MXN), IVA incluido.</p>
-  </div>
+</div>
+<p class="nota-recargas">¿Se quedaron a media plática? Agrega tiempo cuando quieras: recarga de $100 (10 minutos) o de $200 (20 minutos + 5 de regalo). Alessia te dice cómo en la misma llamada y siguen platicando.</p>
+<p class="nota-pagos">Pagos seguros con Mercado Pago 🔒 Precios en pesos mexicanos (MXN), IVA incluido.</p>
+</div>
 </section>
 
 <!-- ================= FAQ ================= -->
 <section>
-  <div class="contenedor">
-    <h2>Preguntas que seguro tienes</h2>
-    <p class="intro-seccion" style="margin-bottom:30px;">Y que merecen respuesta honesta.</p>
+<div class="contenedor">
+<h2>Preguntas que seguro tienes</h2>
+<p class="intro-seccion" style="margin-bottom:30px;">Y que merecen respuesta honesta.</p>
 
-    <div class="pregunta">
-      <h3>¿Alessia es una persona real?</h3>
-      <p>No. Es una compañera virtual creada con inteligencia artificial — te lo decimos de frente, porque la confianza empieza por la honestidad. Habla natural, recuerda todo lo que le cuentas y nunca se aburre de ti. Lo que sí es real es el rato agradable que pasas con ella.</p>
-    </div>
+<div class="pregunta">
+<h3>¿Alessia es una persona real?</h3>
+<p>No. Es una compañera virtual creada con inteligencia artificial — te lo decimos de frente, porque la confianza empieza por la honestidad. Habla natural, recuerda todo lo que le cuentas y nunca se aburre de ti. Lo que sí es real es el rato agradable que pasas con ella.</p>
+</div>
 
-    <div class="pregunta">
-      <h3>¿Necesito una app o un celular moderno?</h3>
-      <p>No. Te llama a tu teléfono de siempre, fijo o celular. Nada que instalar: todo pasa en la llamada.</p>
-    </div>
+<div class="pregunta">
+<h3>¿Necesito una app o un celular moderno?</h3>
+<p>No. Te llama a tu teléfono de siempre, fijo o celular. Nada que instalar: todo pasa en la llamada.</p>
+</div>
 
-    <div class="pregunta">
-      <h3>¿Es terapia o algo médico?</h3>
-      <p>No. Alessia es compañía y entretenimiento. No es psicóloga ni doctora, no sustituye tratamientos y no atiende emergencias.</p>
-    </div>
+<div class="pregunta">
+<h3>¿Es terapia o algo médico?</h3>
+<p>No. Alessia es compañía y entretenimiento. No es psicóloga ni doctora, no sustituye tratamientos y no atiende emergencias.</p>
+</div>
 
-    <div class="pregunta">
-      <h3>¿Y si ya no quiero seguir?</h3>
-      <p>Cancelas cuando quieras, sin penalización, desde tu app de Mercado Pago o diciéndoselo a Alessia en una llamada. Y si lo pides, borramos tus conversaciones. Tú mandas, siempre.</p>
-    </div>
-  </div>
+<div class="pregunta">
+<h3>¿Y si ya no quiero seguir?</h3>
+<p>Cancelas cuando quieras, sin penalización, desde tu app de Mercado Pago o diciéndoselo a Alessia en una llamada. Y si lo pides, borramos tus conversaciones. Tú mandas, siempre.</p>
+</div>
+</div>
 </section>
 
 <!-- ================= CIERRE ================= -->
 <section class="cierre">
-  <div class="contenedor">
-    <h2>Hoy tu casa puede sonar distinto</h2>
-    <a class="btn-wa btn-prueba" href="#">🎙️ Platica con ella ahorita</a>
-    <p class="nota-gratis">Tu primera llamada es gratis, aquí mismo.</p>
-  </div>
+<div class="contenedor">
+<h2>Hoy tu casa puede sonar distinto</h2>
+<a class="btn-wa btn-prueba" href="#">🎙️ Platica con ella ahorita</a>
+<p class="nota-gratis">Tu primera llamada es gratis, aquí mismo.</p>
+</div>
 </section>
 
 <!-- ================= LEGAL ================= -->
 <footer>
-  <div class="contenedor">
-    <div class="bloque">
-      <h4>Sobre Alessia</h4>
-      <p>Alessia es una compañera virtual generada con inteligencia artificial. No es una persona real; su historia y personalidad son parte de su diseño. Este es un servicio de compañía y entretenimiento; no constituye ni sustituye servicios médicos, psicológicos, terapéuticos ni de ningún otro tipo profesional, y no está diseñado para la atención de emergencias. Las imágenes de Alessia son generadas digitalmente.</p>
-    </div>
-    <div class="bloque">
-      <h4>Aviso de privacidad (versión simplificada)</h4>
-      <p>[Nombre del responsable], con domicilio en [domicilio], es responsable del tratamiento de tus datos personales (nombre, teléfono y el contenido de tus conversaciones), que se procesan mediante sistemas automatizados de inteligencia artificial con la finalidad de prestarte el servicio de compañía, personalizar tus conversaciones y gestionar tus pagos. No compartimos ni vendemos tus datos a terceros. Puedes ejercer tus derechos de Acceso, Rectificación, Cancelación y Oposición (ARCO), así como solicitar la eliminación de tus conversaciones, escribiendo a [correo de contacto]. Consulta el aviso de privacidad integral en esta misma página o solicítalo por correo.</p>
-    </div>
-    <div class="bloque">
-      <h4>Condiciones del servicio</h4>
-      <p>Precios en pesos mexicanos, IVA incluido. El Plan Alessia se renueva automáticamente cada mes mediante Mercado Pago y puede cancelarse en cualquier momento sin penalización. La promoción de bienvenida es un pago único por clienta nueva. Servicio para mayores de 18 años.</p>
-    </div>
-    <p>© 2026 Alessia · Con un pie en Italia y el corazón en México 🇮🇹🇲🇽</p>
-  </div>
+<div class="contenedor">
+<div class="bloque">
+<h4>Sobre Alessia</h4>
+<p>Alessia es una compañera virtual generada con inteligencia artificial. No es una persona real; su historia y personalidad son parte de su diseño. Este es un servicio de compañía y entretenimiento; no constituye ni sustituye servicios médicos, psicológicos, terapéuticos ni de ningún otro tipo profesional, y no está diseñado para la atención de emergencias. Las imágenes de Alessia son generadas digitalmente.</p>
+</div>
+<div class="bloque">
+<h4>Aviso de privacidad (versión simplificada)</h4>
+<p>[Nombre del responsable], con domicilio en [domicilio], es responsable del tratamiento de tus datos personales (nombre, teléfono y el contenido de tus conversaciones), que se procesan mediante sistemas automatizados de inteligencia artificial con la finalidad de prestarte el servicio de compañía, personalizar tus conversaciones y gestionar tus pagos. No compartimos ni vendemos tus datos a terceros. Puedes ejercer tus derechos de Acceso, Rectificación, Cancelación y Oposición (ARCO), así como solicitar la eliminación de tus conversaciones, escribiendo a [correo de contacto]. Consulta el aviso de privacidad integral en esta misma página o solicítalo por correo.</p>
+</div>
+<div class="bloque">
+<h4>Condiciones del servicio</h4>
+<p>Precios en pesos mexicanos, IVA incluido. El Plan Alessia se renueva automáticamente cada mes mediante Mercado Pago y puede cancelarse en cualquier momento sin penalización. La promoción de bienvenida es un pago único por clienta nueva. Servicio para mayores de 18 años.</p>
+</div>
+<p>© 2026 Alessia · Con un pie en Italia y el corazón en México 🇮🇹🇲🇽</p>
+</div>
 </footer>
 
 <div class="barra-fija">
-  <a class="btn-wa btn-prueba" href="#">🎙️ Mi llamada gratis con Alessia</a>
+<a class="btn-wa btn-prueba" href="#">🎙️ Mi llamada gratis con Alessia</a>
 </div>
 
 <script>
-  // Botón de audio: solo aparece si existe alessia.mp3 junto al HTML
-  (function(){
-    var audio = document.getElementById('audioAlessia');
-    var boton = document.getElementById('botonAudio');
-    audio.addEventListener('canplaythrough', function(){ boton.style.display = 'inline-flex'; });
-    audio.addEventListener('error', function(){ boton.style.display = 'none'; });
-    audio.load();
-  })();
-  function reproducirVoz(){
-    var audio = document.getElementById('audioAlessia');
-    var boton = document.getElementById('botonAudio');
-    if(audio.paused){ audio.play(); boton.innerHTML = '⏸ Escuchando…'; }
-    else { audio.pause(); boton.innerHTML = '▶ Escucha mi voz'; }
-    audio.onended = function(){ boton.innerHTML = '▶ Escucha mi voz'; };
-  }
+// Botón de audio: solo aparece si existe alessia.mp3 junto al HTML
+(function(){
+var audio = document.getElementById('audioAlessia');
+var boton = document.getElementById('botonAudio');
+audio.addEventListener('canplaythrough', function(){ boton.style.display = 'inline-flex'; });
+audio.addEventListener('error', function(){ boton.style.display = 'none'; });
+audio.load();
+})();
+function reproducirVoz(){
+var audio = document.getElementById('audioAlessia');
+var boton = document.getElementById('botonAudio');
+if(audio.paused){ audio.play(); boton.innerHTML = '⏸ Escuchando…'; }
+else { audio.pause(); boton.innerHTML = '▶ Escucha mi voz'; }
+audio.onended = function(){ boton.innerHTML = '▶ Escucha mi voz'; };
+}
 </script>
 
-
 <script type="module">
-  import Vapi from 'https://esm.sh/@vapi-ai/web';
-  const vapi = new Vapi('ae75ad9d-496d-4da9-9e45-8e2413c7c9c0');
-  const ASSISTANT_ID = '5e29e805-8285-412c-88c0-5755bb56f70a';
-  const LIMITE_MS = 5.5 * 60 * 1000;
-  const botones = document.querySelectorAll('.btn-prueba');
-  const estado = document.getElementById('estadoLlamada');
-  let enLlamada = false, conectando = false, timer = null;
-  const textoOriginal = new Map();
-  botones.forEach(b => textoOriginal.set(b, b.innerHTML));
-  const setTexto = t => botones.forEach(b => b.innerHTML = t);
-  const setEstado = t => { if (estado) estado.textContent = t; };
-  function reset(){
-    enLlamada = false; conectando = false; clearTimeout(timer);
-    botones.forEach(b => b.innerHTML = textoOriginal.get(b));
-  }
-  botones.forEach(b => b.addEventListener('click', async e => {
-    e.preventDefault();
-    if (enLlamada) { vapi.stop(); return; }
-    if (conectando) return;
-    conectando = true;
-    setTexto('Conect\u00e1ndote con Alessia\u2026');
-    setEstado('Acepta el micr\u00f3fono para poder platicar con ella.');
-    try { await vapi.start(ASSISTANT_ID); }
-    catch (err) { setEstado('No se pudo conectar. Intenta de nuevo en un momentito.'); reset(); }
-  }));
-  vapi.on('call-start', () => {
-    enLlamada = true; conectando = false;
-    setTexto('\uD83D\uDD34 Colgar');
-    setEstado('Alessia te est\u00e1 escuchando\u2026');
-    timer = setTimeout(() => vapi.stop(), LIMITE_MS);
-  });
-  vapi.on('call-end', () => { setEstado('\u00bfTe gust\u00f3? M\u00e1rcale de nuevo cuando quieras.'); reset(); });
-  vapi.on('error', () => { setEstado('Se cort\u00f3 la conexi\u00f3n. Intenta de nuevo.'); reset(); });
+import Vapi from 'https://esm.sh/@vapi-ai/web';
+const vapi = new Vapi('ae75ad9d-496d-4da9-9e45-8e2413c7c9c0');
+const ASSISTANT_ID = '5e29e805-8285-412c-88c0-5755bb56f70a';
+const LIMITE_MS = 5.5 * 60 * 1000;
+const botones = document.querySelectorAll('.btn-prueba');
+const estado = document.getElementById('estadoLlamada');
+let enLlamada = false, conectando = false, timer = null;
+const textoOriginal = new Map();
+botones.forEach(b => textoOriginal.set(b, b.innerHTML));
+const setTexto = t => botones.forEach(b => b.innerHTML = t);
+const setEstado = t => { if (estado) estado.textContent = t; };
+function reset(){
+enLlamada = false; conectando = false; clearTimeout(timer);
+botones.forEach(b => b.innerHTML = textoOriginal.get(b));
+}
+botones.forEach(b => b.addEventListener('click', async e => {
+e.preventDefault();
+if (enLlamada) { vapi.stop(); return; }
+if (conectando) return;
+conectando = true;
+setTexto('Conectándote con Alessia…');
+setEstado('Acepta el micrófono para poder platicar con ella.');
+try { await vapi.start(ASSISTANT_ID); }
+catch (err) { setEstado('No se pudo conectar. Intenta de nuevo en un momentito.'); reset(); }
+}));
+vapi.on('call-start', () => {
+enLlamada = true; conectando = false;
+setTexto('🔴 Colgar');
+setEstado('Alessia te está escuchando…');
+timer = setTimeout(() => vapi.stop(), LIMITE_MS);
+});
+vapi.on('call-end', () => { setEstado('¿Te gustó? Márcale de nuevo cuando quieras.'); reset(); });
+vapi.on('error', () => { setEstado('Se cortó la conexión. Intenta de nuevo.'); reset(); });
 </script>
 
 </body>
