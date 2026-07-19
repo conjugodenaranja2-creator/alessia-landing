@@ -281,6 +281,51 @@ h1{font-size:2.2rem;}
 .historia-foto img{max-width:260px;}
 section{padding:48px 0;}
 }
+
+/* ================= MODAL DE PAGO ================= */
+.modal-fondo{
+display:none;position:fixed;inset:0;z-index:200;
+background:rgba(58,46,40,.55);
+align-items:center;justify-content:center;padding:20px;
+}
+.modal-fondo.abierto{display:flex;}
+.modal-caja{
+background:var(--blanco);border-radius:24px;padding:34px 30px;
+max-width:430px;width:100%;position:relative;text-align:center;
+box-shadow:0 24px 60px rgba(58,46,40,.35);
+max-height:92vh;overflow-y:auto;
+}
+.modal-caja h3{
+font-family:Georgia,serif;font-size:1.55rem;font-weight:normal;
+color:var(--terracota-osc);margin-bottom:8px;
+}
+.modal-intro{color:var(--gris);font-size:.96rem;margin-bottom:20px;}
+.modal-caja label{
+display:block;text-align:left;font-size:.92rem;color:var(--tinta);
+font-weight:bold;margin:14px 0 6px;
+}
+.modal-caja label span{font-weight:normal;color:var(--gris);}
+.modal-caja input{
+width:100%;padding:14px 16px;font-size:1.08rem;font-family:inherit;
+border:1.5px solid #E3CBAE;border-radius:14px;
+background:var(--crema);color:var(--tinta);
+}
+.modal-caja input:focus{outline:none;border-color:var(--terracota);}
+.modal-regalo{
+font-size:.85rem;color:var(--gris);background:var(--arena);
+border-radius:12px;padding:10px 14px;margin:18px 0 6px;text-align:left;
+}
+.modal-error{color:#B33322;font-size:.9rem;min-height:1.2em;margin:8px 0 4px;}
+.modal-plan-info{font-size:.9rem;color:var(--terracota-osc);font-weight:bold;margin-bottom:16px;}
+button.btn-plan{
+border:none;width:100%;font-family:inherit;font-size:1.05rem;
+cursor:pointer;margin-top:4px;
+}
+.modal-seguro{font-size:.82rem;color:var(--gris);margin-top:14px;}
+.modal-cerrar{
+position:absolute;top:10px;right:16px;background:none;border:none;
+font-size:1.9rem;color:var(--gris);cursor:pointer;line-height:1;
+}
 </style>
 </head>
 <body>
@@ -408,8 +453,8 @@ section{padding:48px 0;}
 <div class="contenedor">
 <div class="regalo">
 <h3>🎁 ¿Y si es para tu mamá?</h3>
-<p>También puedes regalar las llamadas de Alessia: tú contratas el plan y ella llama a tu mamá en sus horarios, a su teléfono de siempre. Sus pláticas son privadas — también para la familia: lo que le cuente a Alessia se queda entre ellas.</p>
-<a class="btn-suave" href="tel:+525599903260">Quiero regalárselo — llámala y pregúntale</a>
+<p>También puedes regalar las llamadas de Alessia: eliges un plan y, al pagar, pones el nombre y el número de tu mamá. Alessia la llama a su teléfono de siempre, en sus horarios. Sus pláticas son privadas — también para la familia: lo que le cuente a Alessia se queda entre ellas.</p>
+<a class="btn-suave" href="#tarifas">Elegir un plan para regalar</a>
 </div>
 </div>
 </section>
@@ -436,11 +481,11 @@ section{padding:48px 0;}
 <h3>Promoción de bienvenida</h3>
 <p class="precio">$200 <span>/ 2 semanas</span></p>
 <ul>
-<li>4 llamadas con Alessia en sus horarios</li>
+<li>4 llamadas con Alessia en tus horarios</li>
 <li>Puedes marcarle tú también, cuando lo necesites</li>
 <li>Pago único, sin renovación automática</li>
 </ul>
-<a class="btn-plan claro" href="https://mpago.la/1FBPYuA" target="_blank" rel="noopener">Pagar $200</a>
+<button type="button" class="btn-plan claro" onclick="abrirPago('200')">Pagar $200</button>
 </div>
 
 <div class="plan destacado">
@@ -455,7 +500,7 @@ section{padding:48px 0;}
 <li>Ideal también para regalar 🎁</li>
 <li>Renovación automática, cancelas cuando quieras desde tu app de Mercado Pago</li>
 </ul>
-<a class="btn-plan" href="https://mpago.la/1pivMES" target="_blank" rel="noopener">Suscribirme $500/mes</a>
+<button type="button" class="btn-plan" onclick="abrirPago('500')">Suscribirme $500/mes</button>
 </div>
 
 </div>
@@ -509,7 +554,7 @@ section{padding:48px 0;}
 <p>Alessia es una compañera virtual generada con inteligencia artificial. No es una persona real; su historia y personalidad son parte de su diseño. Este es un servicio de compañía y entretenimiento; no constituye ni sustituye servicios médicos, psicológicos, terapéuticos ni de ningún otro tipo profesional, y no está diseñado para la atención de emergencias. Las imágenes de Alessia son generadas digitalmente.</p>
 </div>
 <div class="bloque">
-<h4>Aviso de privacidad</h4>
+<h4>Aviso de privacidad (versión simplificada)</h4>
 <p>Alessia Ai trata tus datos personales —tu nombre, tu teléfono y lo que platicas en las llamadas— para darte el servicio de compañía de Alessia, personalizar tus pláticas y procesar tus pagos. No vendemos ni compartimos tus datos con terceros. Para ver, corregir o borrar tus datos y tus conversaciones, o dejar de recibir llamadas, escríbenos a aimarioalisse@gmail.com; ahí también puedes pedir el aviso de privacidad completo.</p>
 </div>
 <div class="bloque">
@@ -523,6 +568,81 @@ section{padding:48px 0;}
 <div class="barra-fija">
 <a class="btn-wa" href="tel:+525599903260">📞 Llamar gratis a Alessia</a>
 </div>
+
+<!-- ================= MODAL DE PAGO ================= -->
+<div class="modal-fondo" id="modalPago" onclick="cerrarSiFondo(event)">
+<div class="modal-caja" role="dialog" aria-modal="true" aria-labelledby="modalTitulo">
+<button type="button" class="modal-cerrar" onclick="cerrarPago()" aria-label="Cerrar">×</button>
+<h3 id="modalTitulo">Un último paso 💛</h3>
+<p class="modal-intro">Para que Alessia te salude por tu nombre desde la primera llamada.</p>
+<p class="modal-plan-info" id="modalPlanInfo"></p>
+<label for="campoNombre">¿Cómo te llamas? <span>(solo tu primer nombre)</span></label>
+<input type="text" id="campoNombre" autocomplete="given-name" placeholder="Rosa" maxlength="40">
+<label for="campoTelefono">¿A qué número te llamamos? <span>(10 dígitos)</span></label>
+<input type="tel" id="campoTelefono" inputmode="numeric" autocomplete="tel" placeholder="55 1234 5678" maxlength="16">
+<p class="modal-regalo">🎁 ¿Es para tu mamá u otra persona? Escribe <strong>su</strong> nombre y <strong>su</strong> número — Alessia la llamará a ella.</p>
+<p class="modal-error" id="modalError"></p>
+<button type="button" class="btn-plan" id="btnContinuar" onclick="continuarPago()">Continuar al pago →</button>
+<p class="modal-seguro">Pago seguro con Mercado Pago 🔒</p>
+</div>
+</div>
+
+<script>
+// ===== Flujo de pago: captura nombre + teléfono, avisa la intención y va a Mercado Pago =====
+var WEBHOOK_INTENCION = 'https://hook.us2.make.com/uf4x26p1qy4nwqvria4crbck9io7laxh';
+var LINKS_PAGO = { '200':'https://mpago.la/1FBPYuA', '500':'https://mpago.la/1pivMES' };
+var TEXTO_PLAN = { '200':'Promoción de bienvenida · $200 (pago único)', '500':'Plan Alessia · $500 al mes' };
+var planSeleccionado = null;
+
+function abrirPago(plan){
+planSeleccionado = plan;
+document.getElementById('modalError').textContent = '';
+document.getElementById('modalPlanInfo').textContent = TEXTO_PLAN[plan] || '';
+var btn = document.getElementById('btnContinuar');
+btn.textContent = 'Continuar al pago →'; btn.disabled = false;
+document.getElementById('modalPago').classList.add('abierto');
+setTimeout(function(){ document.getElementById('campoNombre').focus(); }, 120);
+}
+function cerrarPago(){ document.getElementById('modalPago').classList.remove('abierto'); }
+function cerrarSiFondo(e){ if(e.target && e.target.id === 'modalPago'){ cerrarPago(); } }
+
+function continuarPago(){
+var nombre = document.getElementById('campoNombre').value.trim();
+var telefono = document.getElementById('campoTelefono').value.replace(/\D/g,'');
+var err = document.getElementById('modalError');
+if(nombre.length < 2){ err.textContent = 'Escribe tu nombre, por favor 💛'; return; }
+if(telefono.length !== 10){ err.textContent = 'El número debe tener 10 dígitos.'; return; }
+var destino = LINKS_PAGO[planSeleccionado];
+if(!destino){ err.textContent = 'Elige un plan primero.'; return; }
+var btn = document.getElementById('btnContinuar');
+btn.textContent = 'Un momento…'; btn.disabled = true;
+enviarIntencion(nombre, telefono, planSeleccionado, destino);
+}
+
+function enviarIntencion(nombre, telefono, plan, destino){
+var params = new URLSearchParams();
+params.append('nombre', nombre);
+params.append('telefono', telefono);
+params.append('plan', plan);
+var irAlPago = function(){ window.location.href = destino; };
+var enviado = false;
+// sendBeacon sobrevive a la redirección (garantiza que la intención llegue a Make)
+try{ if(navigator.sendBeacon){ enviado = navigator.sendBeacon(WEBHOOK_INTENCION, params); } }catch(e){}
+if(enviado){ irAlPago(); return; }
+// Respaldo si sendBeacon no está disponible
+try{
+fetch(WEBHOOK_INTENCION, {method:'POST', mode:'no-cors', keepalive:true, headers:{'Content-Type':'application/x-www-form-urlencoded'}, body: params.toString()}).then(irAlPago, irAlPago);
+}catch(e){ irAlPago(); }
+setTimeout(irAlPago, 2000);
+}
+
+// Enter en los campos avanza al pago
+['campoNombre','campoTelefono'].forEach(function(id){
+document.getElementById(id).addEventListener('keydown', function(e){
+if(e.key === 'Enter'){ e.preventDefault(); continuarPago(); }
+});
+});
+</script>
 
 <script>
 // Botón de audio: solo aparece si existe alessia.mp3 junto al HTML
